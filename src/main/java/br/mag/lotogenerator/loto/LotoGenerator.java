@@ -30,6 +30,15 @@ public class LotoGenerator implements IGenerator {
             count++;
         }
 
+        sortSeqs();
+
+    }
+
+    private void sortSeqs() {
+        for(Map.Entry e : lotoSeqs.entrySet()){
+           List<Integer> numbersSorted = ((Sequencia)e.getValue()).getNumbers().stream().sorted().collect(Collectors.toList());
+            ((Sequencia)e.getValue()).setNumbers(numbersSorted);
+        }
     }
 
     private List<Integer> generateSeq(int size, List<Integer> numbers ){

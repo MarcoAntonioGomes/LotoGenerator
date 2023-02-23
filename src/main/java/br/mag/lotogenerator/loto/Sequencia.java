@@ -41,6 +41,10 @@ public class Sequencia {
        return formattedNumbers;
     }
 
+    public void setNumbers(List<Integer> numbers) {
+        this.numbers = numbers;
+    }
+
     @Override
     public String toString() {
         return  "Numbers= {" + numbers +'}';
